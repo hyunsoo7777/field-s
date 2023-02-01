@@ -11,7 +11,7 @@ import TECH_img03 from "../../assets/tech_03.jpg";
 
 function Tech() {
   return (
-    <div className="pt-[200px] pb-[200px] w-full text-center">
+    <div className="pt-[200px] w-full text-center">
       <Title title="Our technologies" color="text-primary"></Title>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, Autoplay, A11y]}
@@ -26,7 +26,7 @@ function Tech() {
       >
         <SwiperSlide>
           <div
-            className="mt-[100px] w-[900px] h-[500px] rounded-[50px]"
+            className="mt-[100px] mb-[300px] w-[900px] h-[500px] rounded-[50px]"
             style={{
               backgroundImage: `url(${TECH_img01})`,
               backgroundRepeat: "no-repeat",
@@ -37,7 +37,7 @@ function Tech() {
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className="mt-[100px] w-[900px] h-[500px] rounded-[50px]"
+            className="mt-[100px] mb-[300px] w-[900px] h-[500px] rounded-[50px]"
             style={{
               backgroundImage: `url(${TECH_img02})`,
               backgroundRepeat: "no-repeat",
@@ -48,7 +48,7 @@ function Tech() {
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className="mt-[100px] w-[900px] h-[500px] rounded-[50px]"
+            className="mt-[100px] mb-[300px] w-[900px] h-[500px] rounded-[50px]"
             style={{
               backgroundImage: `url(${TECH_img03})`,
               backgroundRepeat: "no-repeat",
@@ -58,11 +58,6 @@ function Tech() {
           ></div>
         </SwiperSlide>
       </Swiper>
-      <div className="mt-[70px] space-x-[50px] w-full flex justify-center">
-        <div className="w-[40px] h-[40px] bg-primary rounded-full"></div>
-        <div className="w-[40px] h-[40px] bg-primary rounded-full"></div>
-        <div className="w-[40px] h-[40px] bg-primary rounded-full"></div>
-      </div>
     </div>
   );
 }

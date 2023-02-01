@@ -10,11 +10,13 @@
   background: transparent;
 } */
 
+/* Swiper - pagination 기본 색깔이 파란색이고 못생겨서 바꿔줘야됨 */
 .swiper .swiper-pagination {
   position: absolute;
+  /* bottom: -15px !important; */
 }
 .swiper .swiper-pagination-bullet {
-  background-color: #000;
+  background-color: #ffffff;
   margin: 0 10px !important;
   top: 300px !important;
 }

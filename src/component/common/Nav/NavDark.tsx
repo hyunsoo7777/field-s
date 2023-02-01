@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Logo from "../../../assets/fieldS_logo.svg";
 import Button from "../Btn/Button";
 
 function Nav_dark() {
+  const [lang, setlang] = useState(true);
   return (
     <div className="fixed z-20 w-full mt-[30px] py-[20px] flex items-center justify-center ">
       <img src={Logo} alt="" className="w-[140px] mr-[100px]" />
@@ -24,9 +25,28 @@ function Nav_dark() {
         <Button size="sm" title="데모 신청하기"></Button>
       </div>
       <div className="pl-[16px] pr-[19px] py-[9px] rounded-[100px] flex items-center justify-center text-xl font-medium bg-white">
-        <div className="mr-[15px]">한</div>
+        <div
+          className={`cursor-pointer mr-[15px] ${
+            lang === true ? "text-primary" : "text-lang"
+          }`}
+          onClick={() => {
+            setlang(true);
+          }}
+        >
+          한
+        </div>
         <div className="text-lang mr-[18px]">|</div>
-        <div className="text-lang">E</div>
+        <div
+          className={`cursor-pointer ${
+            lang === false ? "text-primary" : "text-lang"
+          }`}
+          onClick={() => {
+            setlang(false);
+            console.log("bang");
+          }}
+        >
+          E
+        </div>
       </div>
     </div>
   );

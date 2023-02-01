@@ -1,0 +1,12 @@
+{
+  "include": ["src", "src/App.ts", "/index.js"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "module": "Commonjs",
+    "rootDir": "src",
+    "outDir": "dist",
+    "target": "es5",
+    "esModuleInterop": true,
+    "jsx": "react-jsx"
+  }
+}

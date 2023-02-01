@@ -1,13 +1,20 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
+
+/* 세로 스크롤바 안보이게 하고싶을 시 추가 */
+/* .no-scrollbar::-webkit-scrollbar {
+  display: none;
+  background: transparent;
+} */
+
+.swiper .swiper-pagination {
+  position: absolute;
+}
+.swiper .swiper-pagination-bullet {
+  background-color: #000;
+  margin: 0 10px !important;
+  top: 300px !important;
 }

@@ -1,8 +1,7 @@
 import React from "react";
 import Button from "../common/Btn/Button";
 import TitleKo from "../common/Text/TitleKo";
-import GIF from "../../assets/04.gif";
-
+import GIF from "../../assets/main.gif";
 function Main(props) {
   return (
     <div

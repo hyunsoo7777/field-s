@@ -1,11 +1,24 @@
-import React from "react";
+import { motion } from "framer-motion";
+import React, { useRef, useState } from "react";
 
 function AboutCont() {
+  const containerRef = useRef(null);
+  const [left, setLeft] = useState(0);
+  const handleScroll = (event) => {
+    event.preventDefault();
+    setLeft(left + event.deltaY);
+  };
   return (
-    <div className="w-[985px] bg-white pt-[30px] pb-[30px] pl-[80px] pr-[80px] rounded-[40px] text-center">
-      <span className="text-[70px] font-bold text-primary">
-        AI를 적용한 웹/모바일 앱 제작
-      </span>
+    <div
+      className="overflow-hidden h-full"
+      ref={containerRef}
+      onWheel={handleScroll}
+    >
+      <div className="w-[400%] mt-[150px] flex">
+        <motion.div className="w-[1040px] py-[30px] text-[70px] text-center font-bold rounded-[40px] bg-white text-primary">
+          AI를 적용한 웹/모바일 앱 제작
+        </motion.div>
+      </div>
     </div>
   );
 }

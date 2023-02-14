@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
 
 /* 세로 스크롤바 안보이게 하고싶을 시 추가 */
-/* .no-scrollbar::-webkit-scrollbar {
+.scrollbar::-webkit-scrollbar {
   display: none;
-  background: transparent;
-} */
+}
 
 /* Swiper - pagination 기본 색깔이 파란색이고 아주 몬생겨서 바꿔줘야됨 */
 .swiper .swiper-pagination {

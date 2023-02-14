@@ -1,13 +1,19 @@
 import React, { useRef } from "react";
-import { motion, useAnimation, useInView, Variants } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect } from "react";
 
-function Title_ko(props) {
-  const TitleVariant: Variants = {
+interface ISubTitle {
+  title: string;
+  size: string;
+  delay: any;
+}
+
+function SubTitle(props: ISubTitle) {
+  const subTitleVariant = {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
+      transition: { duration: 0.6, delay: props.delay },
     },
     hidden: { opacity: 0, y: 20 },
   };
@@ -24,10 +30,9 @@ function Title_ko(props) {
   }, [control, isInView]);
   return (
     <motion.div
-      className="text-[70px] font-semibold text-white 
-       mb-[30px] relative z-30"
+      className={`${props.size} font-medium text-white`}
       ref={ref}
-      variants={TitleVariant}
+      variants={subTitleVariant}
       initial="hidden"
       animate={control}
     >
@@ -36,4 +41,4 @@ function Title_ko(props) {
   );
 }
 
-export default Title_ko;
+export default SubTitle;

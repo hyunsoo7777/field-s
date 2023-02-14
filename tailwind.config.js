@@ -28,6 +28,5 @@ module.exports = {
     fontFamily: {
       sans: ["Pretendard"],
     },
-    plugins: [require("tailwind-scrollbar-hide")],
   },
 };

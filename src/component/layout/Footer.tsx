@@ -5,8 +5,8 @@ import Up from "../../assets/Up.svg";
 
 function Footer() {
   return (
-    <div className="h-[500px] bg-primary rounded-t-[100px] flex items-center justify-center">
-      <div className="w-[1040px] h-[300px] text-white">
+    <div className="w-full py-[100px] bg-primary rounded-t-[100px] flex items-center justify-center">
+      <div className="w-[1040px] text-white">
         <div className="flex justify-between">
           <img src={LogoAllwhite} alt="" />
           <img src={Social} alt="" />

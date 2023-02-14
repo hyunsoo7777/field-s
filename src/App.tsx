@@ -9,11 +9,13 @@ import RequestDemo from "./component/layout/RequestDemo";
 import Team from "./component/layout/Team";
 import Tech from "./component/layout/Tech";
 import Footer from "./component/layout/Footer";
+import Wave from "./component/include/Wave";
 import "./index.css";
 
 function App() {
   return (
-    <div className="App h-screen overflow-x-hidden overflow-y-auto">
+    <div className="App w-screen scrollbar bg-white overflow-x-hidden overflow-y-scroll flex flex-col items-center relative">
+      <Wave></Wave>
       <NavDark></NavDark>
       <Main></Main>
       <About></About>

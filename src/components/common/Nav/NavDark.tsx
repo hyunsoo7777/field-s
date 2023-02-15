@@ -1,15 +1,45 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "../../../assets/fieldS_logo.svg";
+import Logo_white from "../../../assets/fieldS_logo_allwhite.svg";
 import Button from "../Btn/Button";
-import History from "../../layout/History";
 
-function Nav_dark() {
+interface NavProps {
+  dark: boolean;
+  aboutTargetRef: React.RefObject<HTMLDivElement>;
+  aboutContainerRef: React.RefObject<HTMLDivElement>;
+  historyTargetRef: React.RefObject<HTMLDivElement>;
+  historyContainerRef: React.RefObject<HTMLDivElement>;
+}
+function Nav_dark(props: NavProps) {
   const [lang, setlang] = useState(true);
+
   return (
     <div className="fixed z-50 w-[1040px] mt-[30px] py-[20px] flex justify-between items-center">
-      <img src={Logo} alt="" className="w-[140px] mr-[101px]" />
+      <img
+        src={props.dark ? Logo_white : Logo}
+        alt=""
+        className="w-[140px] mr-[101px]"
+      />
       <div className="w-[500px] box-border space-x-[30px] flex items-center justify-between font-medium text-[18px] mr-[30px] rounded-[100px] py-[9px] px-[32px] bg-white">
-        <div className="hover:text-secondary cursor-pointer transition-all duration-300 ease-out">
+        <div
+          className="hover:text-secondary cursor-pointer transition-all duration-300 ease-out"
+          onClick={() => {
+            window.scrollTo({
+              top: props.aboutContainerRef.current.offsetTop,
+              behavior: "smooth",
+            });
+            props.aboutTargetRef.current.scrollTo({
+              left: 0,
+              top: 0,
+              behavior: "auto",
+            });
+            props.historyTargetRef.current.scrollTo({
+              left: 0,
+              top: 0,
+              behavior: "auto",
+            });
+          }}
+        >
           회사 소개
         </div>
         <div className="hover:text-secondary cursor-pointer transition-all duration-300 ease-out">

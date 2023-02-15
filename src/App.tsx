@@ -1,25 +1,44 @@
-import React from "react";
-import About from "./component/layout/About";
-import NavDark from "./component/common/Nav/NavDark";
-import Contact from "./component/layout/Contact";
-import History from "./component/layout/History";
-import Main from "./component/layout/Main";
-import Product from "./component/layout/Product";
-import RequestDemo from "./component/layout/RequestDemo";
-import Team from "./component/layout/Team";
-import Tech from "./component/layout/Tech";
-import Footer from "./component/layout/Footer";
-import Wave from "./component/include/Wave";
+import About from "./components/layout/About";
+import NavDark from "./components/common/Nav/NavDark";
+import Contact from "./components/layout/Contact";
+import History from "./components/layout/History";
+import Main from "./components/layout/Main";
+import Product from "./components/layout/Product";
+import RequestDemo from "./components/layout/RequestDemo";
+import Team from "./components/layout/Team";
+import Tech from "./components/layout/Tech";
+import Footer from "./components/layout/Footer";
+import Wave from "./components/include/Wave";
 import "./index.css";
+import useScroll from "./utils/useScroll";
 
 function App() {
+  const {
+    aboutContainerRef,
+    aboutTargetRef,
+    historyContainerRef,
+    historyTargetRef,
+  } = useScroll();
+
   return (
     <div className="App w-screen scrollbar bg-white overflow-x-hidden overflow-y-scroll flex flex-col items-center relative">
       <Wave></Wave>
-      <NavDark></NavDark>
+      <NavDark
+        dark={true}
+        aboutContainerRef={aboutContainerRef}
+        aboutTargetRef={aboutTargetRef}
+        historyContainerRef={historyContainerRef}
+        historyTargetRef={historyTargetRef}
+      ></NavDark>
       <Main></Main>
-      <About></About>
-      <History></History>
+      <About
+        ContainerRef={aboutContainerRef}
+        TargetRef={aboutTargetRef}
+      ></About>
+      <History
+        ContainerRef={historyContainerRef}
+        TargetRef={historyTargetRef}
+      ></History>
       <Team></Team>
       <Product></Product>
       <Tech></Tech>

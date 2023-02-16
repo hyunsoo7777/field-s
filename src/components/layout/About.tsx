@@ -10,7 +10,7 @@ interface AboutProps {
 function About(props: AboutProps) {
   return (
     <div
-      className="w-full pt-[200px] pb-[250px] rounded-b-[100px] flex flex-col items-center bg-primary"
+      className="w-full pt-[200px] pb-[250px] rounded-b-[100px] flex flex-col items-center bg-primary z-30"
       ref={props.ContainerRef}
     >
       <div className="w-[1040px]">

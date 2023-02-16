@@ -2,7 +2,12 @@ import React, { useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect } from "react";
 
-function Title(props) {
+interface TitleProps {
+  color: string;
+  title: string;
+}
+
+function Title(props: TitleProps) {
   const TitleVariant = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
     hidden: { opacity: 0, y: 30 },
@@ -20,7 +25,7 @@ function Title(props) {
   }, [control, isInView]);
   return (
     <motion.div
-      className={`text-[100px] ${props.color} font-bold mb-[50px]`}
+      className={`text-[100px] ${props.color} font-bold mb-[50px] transition-colors duration-500`}
       ref={ref}
       variants={TitleVariant}
       initial="hidden"

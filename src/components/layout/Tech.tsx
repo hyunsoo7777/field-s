@@ -9,9 +9,9 @@ import TECH_img01 from "../../assets/tech_01.jpg";
 import TECH_img02 from "../../assets/tech_02.jpg";
 import TECH_img03 from "../../assets/tech_03.jpg";
 
-function Tech() {
+function Tech({ techContainerRef }) {
   return (
-    <div className="pt-[200px] w-full text-center">
+    <div className="pt-[200px] w-full text-center" ref={techContainerRef}>
       <Title title="Our technologies" color="text-primary"></Title>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, Autoplay, A11y]}

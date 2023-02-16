@@ -2,7 +2,15 @@ import React, { useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect } from "react";
 
-function Button_sm(props) {
+// interface ButtonProps {
+//   size: string;
+//   title: string;
+//   delay: string;
+//   duration: string;
+//   initial: string;
+// }
+
+function Button(props) {
   const ButtonSize = {
     sm: "w-[140px] py-[9px] px-[21px] text-[18px] bg-secondary text-white text-center font-semibold rounded-[50px] cursor-pointer hover:bg-hover hover:text-primary transition-all duration-300 ease-out",
     lg: "px-[62px] py-[14px] text-[25px] mt-[30px] font-semibold bg-secondary text-white text-center rounded-[50px] cursor-pointer hover:bg-hover hover:text-primary transition-all duration-300 ease-out",
@@ -31,7 +39,7 @@ function Button_sm(props) {
       className={ButtonSize[props.size]}
       ref={ref}
       variants={ButtonVariant}
-      initial="hidden"
+      initial={props.initial}
       animate={control}
     >
       {props.title}
@@ -39,4 +47,4 @@ function Button_sm(props) {
   );
 }
 
-export default Button_sm;
+export default Button;

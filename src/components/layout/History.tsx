@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from "react";
 import TitleEn from "../common/Text/TitleEn";
 import HistoryFootprint from "../include/HistoryFootprint";
 
@@ -16,7 +15,7 @@ function History(props: HistoryProps) {
         <TitleEn title="History" color="text - primary"></TitleEn>
       </div>
       <div
-        className={`overflow-hidden w-full flex gap-[250px] px-[calc((100vw-1040px)/2)]`}
+        className={`overflow-hidden w-full flex gap-[250px] pl-[calc((100vw-1040px)/2)] pr-[calc(50vw+214px)]`}
         ref={props.TargetRef}
       >
         <HistoryFootprint

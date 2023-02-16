@@ -1,5 +1,6 @@
 import React from "react";
 import Location from "../../assets/location.png";
+import ContactInput from "../include/ContactInput";
 
 function Contact() {
   return (
@@ -11,21 +12,12 @@ function Contact() {
         <img src={Location} alt="" />
         <div className="flex flex-col items-center justify-between w-[600px]">
           <div className="font-semibold text-[40px]">Contact us</div>
-          <input
-            className="w-full font-sans bg-inputColor appearance-none border-none rounded-[10px] py-[16px] px-[20px] text-opacity-20 font-medium text-[24px] text-gray focus:outline-none focus:shadow-outline"
-            type="text"
-            placeholder="이름"
-          />
-          <input
-            className="w-full font-sans bg-inputColor appearance-none border-none rounded-[10px] py-[16px] px-[20px] text-opacity-20 font-medium text-[24px] text-gray focus:outline-none focus:shadow-outline"
-            type="text"
-            placeholder="이메일 주소"
-          />
-          <input
-            className="w-full font-sans bg-inputColor h-[350px] appearance-none border-none rounded-[10px] py-[16px] px-[20px] text-opacity-20 font-medium text-[24px] text-gray focus:outline-none focus:shadow-outline"
-            type="text"
-            placeholder="문의 사항을 남겨주세요"
-          />
+          <ContactInput text="이름"></ContactInput>
+          <ContactInput text="이메일 주소"></ContactInput>
+          <ContactInput
+            text="문의 사항을 남겨주세요"
+            height="350px"
+          ></ContactInput>
           <button className="w-full h-[68px] bg-primary text-white font-semibold text-[30px] rounded-[50px] hover:bg-secondary transition-all duration-300 ease-out">
             문의하기
           </button>

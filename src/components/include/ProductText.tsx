@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 function ProductCont(props) {
   const subTitleVariant = {
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.6 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.3 } },
     hidden: { opacity: 0, y: 30 },
   };
   const control = useAnimation();
@@ -20,7 +20,7 @@ function ProductCont(props) {
   }, [control, isInView]);
   return (
     <motion.div
-      className="text-primary flex flex-col items-center text-center"
+      className={`${props.color} flex flex-col items-center text-center`}
       ref={ref}
       variants={subTitleVariant}
       initial="hidden"

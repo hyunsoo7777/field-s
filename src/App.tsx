@@ -11,8 +11,20 @@ import Footer from "./components/layout/Footer";
 import Wave from "./components/include/Wave";
 import "./index.css";
 import useScroll from "./utils/useScroll";
+import { useRef } from "react";
+import { IntlProvider } from "react-intl";
 
 function App() {
+  const teamContainerRef = useRef(null);
+  const productContainerRef = useRef(null);
+  const techContainerRef = useRef(null);
+  window.scrollTo({
+    left: 0,
+    top: 0,
+    behavior: "auto",
+  });
+  // console.log({ scrollY: window.scrollY });
+
   const {
     aboutContainerRef,
     aboutTargetRef,
@@ -21,31 +33,36 @@ function App() {
   } = useScroll();
 
   return (
-    <div className="App w-screen scrollbar bg-white overflow-x-hidden overflow-y-scroll flex flex-col items-center relative">
-      <Wave></Wave>
-      <NavDark
-        dark={true}
-        aboutContainerRef={aboutContainerRef}
-        aboutTargetRef={aboutTargetRef}
-        historyContainerRef={historyContainerRef}
-        historyTargetRef={historyTargetRef}
-      ></NavDark>
-      <Main></Main>
-      <About
-        ContainerRef={aboutContainerRef}
-        TargetRef={aboutTargetRef}
-      ></About>
-      <History
-        ContainerRef={historyContainerRef}
-        TargetRef={historyTargetRef}
-      ></History>
-      <Team></Team>
-      <Product></Product>
-      <Tech></Tech>
-      <RequestDemo></RequestDemo>
-      <Contact></Contact>
-      <Footer></Footer>
-    </div>
+    <IntlProvider locale="en">
+      <div className="App scrollbar bg-white overflow-x-hidden overflow-y-scroll flex flex-col items-center relative">
+        <Wave></Wave>
+        <NavDark
+          dark={true}
+          aboutContainerRef={aboutContainerRef}
+          aboutTargetRef={aboutTargetRef}
+          historyContainerRef={historyContainerRef}
+          historyTargetRef={historyTargetRef}
+          teamContainerRef={teamContainerRef}
+          productContainerRef={productContainerRef}
+          techContainerRef={techContainerRef}
+        ></NavDark>
+        <Main></Main>
+        <About
+          ContainerRef={aboutContainerRef}
+          TargetRef={aboutTargetRef}
+        ></About>
+        <History
+          ContainerRef={historyContainerRef}
+          TargetRef={historyTargetRef}
+        ></History>
+        <Team teamContainerRef={teamContainerRef}></Team>
+        <Product productContainerRef={productContainerRef}></Product>
+        <Tech techContainerRef={techContainerRef}></Tech>
+        <RequestDemo></RequestDemo>
+        <Contact></Contact>
+        <Footer></Footer>
+      </div>
+    </IntlProvider>
   );
 }
 

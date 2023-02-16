@@ -3,7 +3,7 @@ import { motion, useAnimation, useInView, Variants } from "framer-motion";
 import { useEffect } from "react";
 
 function Title_ko(props) {
-  const TitleVariant: Variants = {
+  const titleVariant: Variants = {
     visible: {
       opacity: 1,
       y: 0,
@@ -27,7 +27,7 @@ function Title_ko(props) {
       className="text-[70px] font-semibold text-white 
        mb-[30px] relative z-30"
       ref={ref}
-      variants={TitleVariant}
+      variants={titleVariant}
       initial="hidden"
       animate={control}
     >

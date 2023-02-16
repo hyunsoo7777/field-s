@@ -9,8 +9,9 @@ function RequestDemo(props) {
       <Button
         title="데모 신청하기"
         size="lg"
-        delay="0.6"
-        duration="0.6"
+        delay="0.3"
+        duration="0.3"
+        initial="hidden"
       ></Button>
     </div>
   );

@@ -1,5 +1,4 @@
 import { easeInOut } from "framer-motion";
-import WAVE from "../../assets/wave.png";
 import { motion } from "framer-motion";
 import UNION from "../../assets/Union.png";
 

@@ -8,7 +8,10 @@
 .scrollbar::-webkit-scrollbar {
   display: none;
 }
-
+.scrollbar {
+  -ms-overflow-style: none; /* IE, Edge */
+  scrollbar-width: none; /* Firefox */
+}
 /* Swiper - pagination 기본 색깔이 파란색이고 아주 몬생겨서 바꿔줘야됨 */
 .swiper .swiper-pagination {
   position: absolute;

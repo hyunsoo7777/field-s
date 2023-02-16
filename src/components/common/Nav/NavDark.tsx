@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Logo from "../../../assets/fieldS_logo.svg";
 import Logo_white from "../../../assets/fieldS_logo_allwhite.svg";
 import Button from "../Btn/Button";
@@ -9,6 +9,9 @@ interface NavProps {
   aboutContainerRef: React.RefObject<HTMLDivElement>;
   historyTargetRef: React.RefObject<HTMLDivElement>;
   historyContainerRef: React.RefObject<HTMLDivElement>;
+  teamContainerRef: React.RefObject<HTMLDivElement>;
+  productContainerRef: React.RefObject<HTMLDivElement>;
+  techContainerRef: React.RefObject<HTMLDivElement>;
 }
 function Nav_dark(props: NavProps) {
   const [lang, setlang] = useState(true);
@@ -42,18 +45,90 @@ function Nav_dark(props: NavProps) {
         >
           회사 소개
         </div>
-        <div className="hover:text-secondary cursor-pointer transition-all duration-300 ease-out">
+        <div
+          className="hover:text-secondary cursor-pointer transition-all duration-300 ease-out"
+          onClick={() => {
+            window.scrollTo({
+              top: props.teamContainerRef.current.offsetTop,
+              behavior: "smooth",
+            });
+            props.aboutTargetRef.current.scrollTo({
+              left:
+                props.aboutTargetRef.current.scrollWidth -
+                props.aboutTargetRef.current.offsetWidth,
+              top: 0,
+              behavior: "auto",
+            });
+            props.historyTargetRef.current.scrollTo({
+              left:
+                props.historyTargetRef.current.scrollWidth -
+                props.historyTargetRef.current.offsetWidth,
+              top: 0,
+              behavior: "auto",
+            });
+          }}
+        >
           Our team
         </div>
-        <div className="hover:text-secondary cursor-pointer transition-all duration-300 ease-out">
+        <div
+          className="hover:text-secondary cursor-pointer transition-all duration-300 ease-out"
+          onClick={() => {
+            window.scrollTo({
+              top: props.productContainerRef.current.offsetTop,
+              behavior: "smooth",
+            });
+            props.aboutTargetRef.current.scrollTo({
+              left:
+                props.aboutTargetRef.current.scrollWidth -
+                props.aboutTargetRef.current.offsetWidth,
+              top: 0,
+              behavior: "auto",
+            });
+            props.historyTargetRef.current.scrollTo({
+              left:
+                props.historyTargetRef.current.scrollWidth -
+                props.historyTargetRef.current.offsetWidth,
+              top: 0,
+              behavior: "auto",
+            });
+          }}
+        >
           자체 서비스
         </div>
-        <div className="hover:text-secondary cursor-pointer transition-all duration-300 ease-out">
+        <div
+          className="hover:text-secondary cursor-pointer transition-all duration-300 ease-out"
+          onClick={() => {
+            window.scrollTo({
+              top: props.techContainerRef.current.offsetTop,
+              behavior: "smooth",
+            });
+            props.aboutTargetRef.current.scrollTo({
+              left:
+                props.aboutTargetRef.current.scrollWidth -
+                props.aboutTargetRef.current.offsetWidth,
+              top: 0,
+              behavior: "auto",
+            });
+            props.historyTargetRef.current.scrollTo({
+              left:
+                props.historyTargetRef.current.scrollWidth -
+                props.historyTargetRef.current.offsetWidth,
+              top: 0,
+              behavior: "auto",
+            });
+          }}
+        >
           서비스/기술 소개
         </div>
       </div>
       <div className="flex items-center mr-[30px]">
-        <Button size="sm" title="데모 신청하기"></Button>
+        <Button
+          size="sm"
+          title="데모 신청하기"
+          delay="0"
+          duration="0"
+          initial="false"
+        ></Button>
       </div>
       <div className="pl-[16px] pr-[19px] pt-[7px] pb-[8px] rounded-[100px] flex items-center justify-center text-[20px] font-medium bg-white">
         <div

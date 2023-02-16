@@ -4,7 +4,7 @@ import GIF from "../../assets/main.gif";
 import SubTitle from "../common/Text/SubTitle";
 import { easeInOut, motion } from "framer-motion";
 
-function Main() {
+function Main(props) {
   return (
     <div className="w-full pb-[100px] flex justify-center">
       <motion.div
@@ -31,7 +31,13 @@ function Main() {
           size="text-[30px]"
           delay="1"
         ></SubTitle>
-        <Button size="lg" title="더 알아보기" delay="1" duration="0.6"></Button>
+        <Button
+          size="lg"
+          title="더 알아보기"
+          delay="1"
+          duration="0.6"
+          initial="hidden"
+        ></Button>
       </div>
     </div>
   );

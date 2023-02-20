@@ -1,6 +1,6 @@
 import Title from "../common/Text/TitleEn";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -14,7 +14,7 @@ function Tech({ techContainerRef }) {
     <div className="pt-[200px] w-full text-center" ref={techContainerRef}>
       <Title title="Our technologies" color="text-primary"></Title>
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, Autoplay, A11y]}
+        modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={100}
         slidesPerView={1.5}
         pagination={{ clickable: true }}
@@ -23,6 +23,16 @@ function Tech({ techContainerRef }) {
         autoplay={{ delay: 2000 }}
         initialSlide={1}
         loop={true}
+        // breakpoints={{
+        //   // when window width is >= 1090px
+        //   1330: {
+        //     slidesPerView: 1.5,
+        //     centeredSlides: true,
+        //     autoplay: {
+        //       delay: 2000,
+        //     },
+        //   },
+        // }}
       >
         <SwiperSlide>
           <div

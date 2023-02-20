@@ -1,5 +1,5 @@
 {
-  "include": ["src", "src/App.ts", "/index.js"],
+  "include": ["src", "src/App.tsx", "/index.js"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "module": "Commonjs",

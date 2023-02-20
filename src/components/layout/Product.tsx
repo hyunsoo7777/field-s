@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 function Product({ productContainerRef }) {
   const productVariant: Variants = {
     visible: {
-      transition: { duration: 1.2 },
+      transition: { duration: 1 },
       scale: 8,
       y: -100,
     },
@@ -22,7 +22,7 @@ function Product({ productContainerRef }) {
       control.start("visible");
       setTimeout(() => {
         setColor("text-white");
-      }, 500);
+      }, 400);
     } else {
       control.start("hidden");
     }

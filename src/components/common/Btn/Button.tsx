@@ -2,15 +2,15 @@ import React, { useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect } from "react";
 
-// interface ButtonProps {
-//   size: string;
-//   title: string;
-//   delay: string;
-//   duration: string;
-//   initial: string;
-// }
+interface ButtonProps {
+  size: string;
+  title: string;
+  delay?: number;
+  duration?: number;
+  initial: string;
+}
 
-function Button(props) {
+function Button(props: ButtonProps) {
   const ButtonSize = {
     sm: "w-[140px] py-[9px] px-[21px] text-[18px] bg-secondary text-white text-center font-semibold rounded-[50px] cursor-pointer hover:bg-hover hover:text-primary transition-all duration-300 ease-out",
     lg: "px-[62px] py-[14px] text-[25px] mt-[30px] font-semibold bg-secondary text-white text-center rounded-[50px] cursor-pointer hover:bg-hover hover:text-primary transition-all duration-300 ease-out",

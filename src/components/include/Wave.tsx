@@ -37,6 +37,9 @@ function Wave() {
             opacity: [0, 1, 0],
             transition: { duration: 1.2, ease: easeInOut },
             height: [500, 500, 0],
+            transitionEnd: {
+              display: "none",
+            },
           }}
         >
           몰입감 있는 경험

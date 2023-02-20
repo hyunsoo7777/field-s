@@ -5,7 +5,7 @@ import { useEffect } from "react";
 interface ISubTitle {
   title: string;
   size: string;
-  delay: any;
+  delay: number;
 }
 
 function SubTitle(props: ISubTitle) {

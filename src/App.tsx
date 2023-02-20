@@ -14,7 +14,12 @@ import useScroll from "./utils/useScroll";
 import { useRef } from "react";
 import { IntlProvider } from "react-intl";
 
-function App() {
+interface LocalProps {
+  messages: string;
+  local: string;
+}
+
+function App(props: LocalProps) {
   const teamContainerRef = useRef(null);
   const productContainerRef = useRef(null);
   const techContainerRef = useRef(null);
@@ -23,8 +28,6 @@ function App() {
     top: 0,
     behavior: "auto",
   });
-  // console.log({ scrollY: window.scrollY });
-
   const {
     aboutContainerRef,
     aboutTargetRef,
@@ -33,7 +36,7 @@ function App() {
   } = useScroll();
 
   return (
-    <IntlProvider locale="en">
+    <IntlProvider locale="en" messages={{}}>
       <div className="App scrollbar bg-white overflow-x-hidden overflow-y-scroll flex flex-col items-center relative">
         <Wave></Wave>
         <NavDark

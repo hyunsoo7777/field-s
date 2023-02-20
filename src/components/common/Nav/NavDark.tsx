@@ -13,16 +13,19 @@ interface NavProps {
   productContainerRef: React.RefObject<HTMLDivElement>;
   techContainerRef: React.RefObject<HTMLDivElement>;
 }
+
 function Nav_dark(props: NavProps) {
   const [lang, setlang] = useState(true);
 
   return (
     <div className="fixed z-50 w-[1040px] mt-[30px] py-[20px] flex justify-between items-center">
-      <img
-        src={props.dark ? Logo_white : Logo}
-        alt=""
-        className="w-[140px] mr-[101px]"
-      />
+      <a href="/">
+        <img
+          src={props.dark ? Logo : Logo_white}
+          alt=""
+          className="w-[140px] mr-[101px]"
+        />
+      </a>
       <div className="w-[500px] box-border space-x-[30px] flex items-center justify-between font-medium text-[18px] mr-[30px] rounded-[100px] py-[9px] px-[32px] bg-white">
         <div
           className="hover:text-secondary cursor-pointer transition-all duration-300 ease-out"
@@ -122,13 +125,7 @@ function Nav_dark(props: NavProps) {
         </div>
       </div>
       <div className="flex items-center mr-[30px]">
-        <Button
-          size="sm"
-          title="데모 신청하기"
-          delay="0"
-          duration="0"
-          initial="false"
-        ></Button>
+        <Button size="sm" title="데모 신청하기" initial="false"></Button>
       </div>
       <div className="pl-[16px] pr-[19px] pt-[7px] pb-[8px] rounded-[100px] flex items-center justify-center text-[20px] font-medium bg-white">
         <div

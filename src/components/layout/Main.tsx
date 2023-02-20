@@ -29,13 +29,13 @@ function Main(props) {
         <SubTitle
           title="사실같은 경험을 할 수 있는 서비스를 만들고 있어요."
           size="text-[30px]"
-          delay="1"
+          delay={1}
         ></SubTitle>
         <Button
           size="lg"
           title="더 알아보기"
-          delay="1"
-          duration="0.6"
+          delay={1}
+          duration={0.6}
           initial="hidden"
         ></Button>
       </div>

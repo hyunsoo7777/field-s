@@ -7,7 +7,7 @@ function Team({ teamContainerRef }) {
       className="w-full bg-primary pt-[200px] pb-[250px] flex flex-col items-center text-center z-30"
       ref={teamContainerRef}
     >
-      <div className="w-[1040px]  rounded-b-[100px] ">
+      <div className="w-[1040px] rounded-b-[100px] ">
         <Title title={"Our team"} color={"text-white"}></Title>
         <TeamCont></TeamCont>
       </div>

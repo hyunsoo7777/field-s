@@ -22,14 +22,14 @@ function TeamCont(props) {
   return (
     <div>
       <motion.div
-        className="grid grid-cols-2 gap-[100px] mt-[100px] justify-center lg:grid-cols-3 "
+        className="grid grid-auto gap-[100px] mt-[100px] justify-center lg:grid-cols-3 "
         ref={ref}
         variants={TeamVariant}
         initial="hidden"
         animate={control}
       >
-        <TeamProfile grid="col-start-2 col-end-2..."></TeamProfile>
-        <TeamProfile grid="col-start-1 ..."></TeamProfile>
+        <TeamProfile grid="col-start-1... lg:col-start-2 col-end-2..."></TeamProfile>
+        <TeamProfile grid="col-start-2 ... lg:col-start-1"></TeamProfile>
         <TeamProfile grid="..."></TeamProfile>
         <TeamProfile grid="..."></TeamProfile>
         <TeamProfile grid="..."></TeamProfile>

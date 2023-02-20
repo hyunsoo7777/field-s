@@ -1,6 +1,7 @@
 import AboutCont from "../include/AboutCont";
 import TitleEn from "../common/Text/TitleEn";
 import SubTitle from "../common/Text/SubTitle";
+import { useEffect, useState } from "react";
 
 interface AboutProps {
   ContainerRef: React.LegacyRef<HTMLDivElement>;
@@ -18,9 +19,10 @@ function About(props: AboutProps) {
         <SubTitle
           title="field S는 다양한 기술을 통해 이런 일들을 하고 있어요."
           size="text-[35px]"
-          delay="0.6"
+          delay={0.6}
         ></SubTitle>
       </div>
+
       <div
         className={`overflow-hidden w-full flex mt-[150px] gap-40 px-[calc((100vw-1040px)/2)]`}
         ref={props.TargetRef}

@@ -1,6 +1,7 @@
 import Button from "../common/Btn/Button";
 import TitleKo from "../common/Text/TitleKo";
 import GIF from "../../assets/main.gif";
+
 import SubTitle from "../common/Text/SubTitle";
 import { easeInOut, motion } from "framer-motion";
 
@@ -20,6 +21,7 @@ function Main(props) {
           transition: { duration: 2.4, ease: easeInOut },
         }}
       ></motion.div>
+
       <div className="w-[1040px] pt-[420px] flex flex-col items-start z-20">
         <TitleKo
           title="몰입감 있는 경험"

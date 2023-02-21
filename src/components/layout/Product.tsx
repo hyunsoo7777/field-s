@@ -44,7 +44,9 @@ function Product({ productContainerRef }) {
         variants={productVariant}
         initial="hidden"
         animate={control}
-      ></motion.div>
+      >
+        {" "}
+      </motion.div>
     </div>
   );
 }
